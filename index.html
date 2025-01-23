@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assest/favicon-32x32 (8).png"
+      type="image/x-icon"
+    />
     <title>News|| Page</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <img src="assest/logo.svg" alt="nav-logo">
-        </div>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              grayishBlue: "hsl(233, 8%, 79%)",
+              softRed: "hsl(5, 85%, 63%)",
+              softOrange: "hsl(35, 77%, 62%)",
+              offWhite: "hsl(36, 100%, 99%)",
+              darkGrayishBlue: "hsl(236, 13%, 42%)",
+              veryDarkBlue: "hsl(240, 100%, 5%)",
+            },
+            fontFamily: {
+              Inter: ['"inter", serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Inter">
+    <nav
+      class="container mx-auto p-[20px] lg:py-[58px] lg:px-[140px] flex justify-between items-center" >
+      
+      <div>
+        <img src="assest/logo.svg" alt="nav-logo" />
+      </div>
+      <!-- nav items -->
+      <ul class=" hidden md:flex gap-12 font-[400] text-darkGrayishBlue">
+        <li class="hover:text-softRed cursor-pointer">Home</li>
+        <li class="hover:text-softRed cursor-pointer">New</li>
+        <li class="hover:text-softRed cursor-pointer">popular</li>
+        <li class="hover:text-softRed cursor-pointer">Trending</li>
+        <li class="hover:text-softRed cursor-pointer">Categories</li>
+      </ul>
+      <!-- menu img -->
+       <div class="md:hidden">
+        <img src="assest/icon-menu.svg" alt="menu-icon">
+       </div>
     </nav>
-    
-</body>
+    <!-- main -->
+     <main class="container mx-auto p-[20px] lg:py-[58px] lg:px-[140px]">
+        <!-- main-section -->
+         <section class="lg:grid grid-cols-3 gap-12">
+            <!-- section-1 -->
+             <section class="col-span-2">
+                <!-- div-1 -->
+                 <div>
+                    <img src="assest/image-web-3-desktop.jpg" alt="image image-web-3-desktop " class="hidden md:block">
+                    <img src="assest/image-web-3-mobile.jpg" alt="image-web-3-mobile"class="md:hidden">
+                 </div>
+                 <!-- div-2 -->
+                 <div class="lg:grid grid-cols-2">
+                    <h1 class="font[800] text-[36px] md:text-[50px]">The Bright Future of Web 3.0?</h1>
+                    <div>
+                        <p>We dive into the next evolution of web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                        <button>READ MORE</button>
+                    </div>
+                     </div>
+
+             </section>
+             <!-- section-2 -->
+              <section>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis ullam ea commodi veritatis ducimus incidunt natus dolore pariatur expedita vel soluta cumque, id labore aut necessitatibus rem eum possimus voluptate! Minus ratione nemo voluptate optio consequuntur deserunt non praesentium rem. Ab assumenda necessitatibus placeat quia provident nam molestiae laborum accusamus error qui recusandae ducimus, enim sunt in facere, dolores temporibus veniam? Expedita, quam corporis et unde voluptatem inventore itaque cumque deserunt culpa voluptatum. Corporis doloribus aut ratione, nam, ipsum quam facere quos odit alias ab officia asperiores laudantium eveniet aliquam! Culpa dolor voluptas, ullam ipsa facilis optio incidunt. Tenetur, dolores?</p>
+
+              </section>
+         </section>
+     </main>
+  </body>
 </html>
